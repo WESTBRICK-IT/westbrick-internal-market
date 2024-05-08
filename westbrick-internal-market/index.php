@@ -15,7 +15,7 @@
         <!-- <div class="item">            
             <img class="item-image" src="img/motorcycle-1.jpg" alt="Item Image"></img>
             <div class="top-middle-things">
-                <h1 class="item-title">Japanese 80's Motorcycle Really Long Title OVer here</h2>
+                <h1 class="item-title">Japanese 80's Motorcycle Really Long Title OVer here</h1>
                 <h4 class="item-seller">Chris Barber</h4>
                 <h5 class="item-posting-date">May 3rd 2024</h5>                
             </div>              
@@ -25,15 +25,56 @@
         </div>         -->
 
         <?php
+            function convertApostrophe($string) { 
+				$newString = str_replace("`", "'", $string); 
+				return $newString; 
+			}
             // Connect to the database
-			 $conn = mysqli_connect("localhost", "cbarber", "!!!Dr0w554p!!!", "items_db");
+			 $conn = mysqli_connect("localhost", "cbarber", "!!!Dr0w554p!!!", "item_db");
 	 
 			 // Check connection
 			 if (!$conn) {
 				 die("Connection failed: " . mysqli_connect_error());
 			 }
 
-             echo "<h1>TESTING</h1>";
+             $query = "SELECT * FROM `items` ORDER BY `date` DESC";
+             $result = mysqli_query($conn, $query);
+             if (mysqli_num_rows($result) > 0) {
+                while($row = mysqli_fetch_assoc($result)){
+                   //replace grave image with apostrophe
+                   $title = $row["title"];
+                   $seller = $row["seller"];
+                   $date = $row["date"];
+                   $price = $row["price"];
+                   $body = $row["body"];
+                   $image_name = $row["image_name"];
+
+                   $title = convertApostrophe($title);
+                   $seller = convertApostrophe($seller);
+                //    $date = convertApostrophe($date);
+                   $body = convertApostrophe($body);
+
+                   //if image name is empty or not found then add default image
+                   if($image_name === ""){
+                       $image_name = "WESTBRICK-Normal.svg";
+                   }
+
+                   echo 	"<div class='item'>";
+                   echo		"<img class='item-image' src='img/". $image_name ."' alt='Item Image'></img>";
+                   echo     "<div class='top-middle-things'>";
+                   echo		    "<h1 class='item-title'>" . $title . "</h1>";
+                   echo			"<h4 class='item-seller'>". $seller . "</h4>";
+                   echo 		"<h5 class='item-posting-date'>" . $date . "</h5>";
+                   echo 	"</div>";
+                   echo 	"<p class='item-body'>" . $body . "</p>";
+                   echo 	"<h1 class='item-price'>$" . $price . "</h1>";
+                   echo 	"<a class='item-garbage-button' href=''><img class='item-garbage-button' src='img/garbage-can.svg' alt='Garbage Can'></a>";                   
+                }            
+            }
+            else {
+                echo "<p>no rows found.</p>";
+            }
+            //  echo "<h1>TESTING</h1>";
              // Close connection
 			 mysqli_close($conn);
         ?>

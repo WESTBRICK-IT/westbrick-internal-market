@@ -59,7 +59,8 @@ html{
     grid-column: 1;
     grid-row: 1 / 4;  
     display: block;
-    margin: 0 auto;        
+    margin: 0 auto; 
+    margin-right: 30px;       
 }
 .top-middle-things {
     grid-column: 2 / 3;
