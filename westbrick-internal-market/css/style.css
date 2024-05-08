@@ -95,6 +95,85 @@ html{
     width: 30px;
     height: 30px;
 }
+.submission-form {
+    display: block;
+    margin: 10px auto;
+    margin-bottom: 100px;
+    background-color: rgba(200, 200, 200, 0.3);
+    border-radius: 10px;      
+    border-style: solid;
+    border-color: rgb( 220, 164, 19);
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    margin-left: 300px;
+    margin-right: 300px;
+}
+.submission-form label{
+    display: block;
+    font-size: 24px;
+    margin: 10px auto;
+    text-align: center;  
+    margin-top: 20px;  
+    font-weight: bold;
+}
+.submission-form input{
+    display: block;
+    margin: 10px auto;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.60);
+    padding: 5px;
+    border-radius: 10px;      
+    border-style: solid;
+    border-color: rgb( 220, 164, 19);
+    border-width: 3px;
+    height: 1.5em;
+    font-size: 24px;
+    max-width: 90%;
+}
+.date-box{
+    width: 300px;
+    padding: 5px;
+    text-align: center;
+}
+.submission-form textarea{
+    display: block;
+    margin: 10px auto;
+    width: 80%;
+    height: 500px;
+    padding: 20px;
+    border-radius: 10px;      
+    border-style: solid;
+    border-color: rgb( 220, 164, 19);
+    border-width: 4px;
+    background-color: rgba(255, 255, 255, 0.60);
+    font-size: 24px;
+}
+.submit-button{
+    display: block;
+    margin: 30px auto 30px auto !important;    
+    width: 300px;
+    height: 70px !important;    
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;    
+    margin-top: 50px;
+}
+.choose-file-input-box {
+    width: 760px;
+    max-width: 90%;
+}
+.submit-button:hover {
+    background-color: rgba(253, 199, 22, 0.85);
+}
+.upload-image-button:hover {
+    background-color: rgba(253, 199, 22, 0.85);
+}
+.post-item-title{
+    text-align: center;
+    font-size: 30px;
+    font-size: 50px;
+}
 @media screen and (max-width: 1600px) {
     .item {
 
@@ -112,7 +191,10 @@ html{
     }
 }
 @media screen and (max-width: 1400px) {
-    
+    .submission-form {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
     
 }
 @media screen and (max-width: 1300px) {
@@ -122,6 +204,7 @@ html{
     }
 }
 @media screen and (max-width: 1200px) {
+    
 }
 @media screen and (max-width: 992px) {
     
@@ -139,7 +222,10 @@ html{
     }
 }
 @media screen and (max-width: 768px) {
-    
+    .submission-form {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
     .item {
         grid-template-columns: auto;
         grid-template-rows: auto auto auto auto auto;
@@ -187,6 +273,10 @@ html{
     .post-item-button {
         max-width: 100%;
         font-size: 20px;
+    }
+    .submission-form {
+        margin-left: 5px;
+        margin-right: 5px;
     }
 }
 /* ARTICLE CODE */
