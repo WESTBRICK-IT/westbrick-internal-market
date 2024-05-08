@@ -39,9 +39,11 @@
         $seller = $_POST['seller'];
         $price = $_POST['price'];
         $body = $_POST['body'];        
-        $date = date('Y-m-d');
-        $time = time();
-        
+        $date = date('Y-m-d');        
+        date_default_timezone_set('America/Denver'); 
+        $time = date('H:i:s', time());
+        echo $time;
+        echo "<h1>$time</h1>";
         function convertApostrophe($string) { 
             $newString = str_replace("'", '`', $string); 
             return $newString; 

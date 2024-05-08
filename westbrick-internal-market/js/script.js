@@ -11,8 +11,9 @@
 //     itemImage[i].addEventListener("click", linkToImage);
 // }
 
-const deleteItem = function(i){
+const deleteItem = function(date, time, title){
+    console.log(date,time,title);
     if(confirm("Are you sure you want to delete this item?")) {
-        window.location.href = "../PHP/delete_item.php?id=" + i;
+        window.location.href = "../PHP/delete_item.php?date=" + date + "time=" + time + "title=" + title;
     }
 }

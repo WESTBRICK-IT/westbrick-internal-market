@@ -35,10 +35,30 @@
             die("Connection failed: " . $conn->connect_error);
         }    
         
-        $itemId = $_GET['id'];
+        $date = $_GET['date'];
+        $time = $_GET['time'];
+        $title = $_GET['title'];
 
-        $sql = "DELETE FROM items WHERE id = $itemId";
-       
+        $sql = "DELETE FROM items WHERE date = '$date' AND time = '$time' AND title = '$title'";
+        
+        if ($conn->query($sql) === TRUE) {
+            // echo "<h1>Article $title submitted successfully! Redirecting to articles page in 5 seconds.</h1>";
+            echo "<div class='westbrick-success-svg-container'>";
+            echo    "<img class='westbrick-success-svg' src='../img/westbrick-success.svg' alt='WESTBRICK SUCCESS SVG'>";
+            echo    "<button class='home-button' type='button' onclick='window.location.href=`../index.php`;'>Home</button>";
+            echo "</div>";
+            // echo "<br><h1>File name: $image" . "File tmp name: $image_tmp" . "</h1>";
+            // Set the time delay in seconds
+            // $timeDelay = 5; // 5 seconds
+            // Wait for the specified amount of time before redirecting
+            // header("refresh:".$timeDelay.";url=../articles/index.php");
+        } else {
+            echo "<div class='westbrick-success-svg-container'>";
+            echo    "Error: " . $sql . "<br>" . $conn->error;
+            echo    "<button class='home-button' type='button' onclick='window.location.href=`index.html`;'>Compose</button>";
+            echo "</div>";
+        }
+
         $conn->close();
         
         ?>
