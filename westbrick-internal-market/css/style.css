@@ -58,8 +58,8 @@ html{
     padding: 7px;  
     grid-column: 1;
     grid-row: 1 / 4;  
-    display: block;
-    margin: 0 auto; 
+    display: flex;
+    justify-self: center; 
     margin-right: 30px;       
 }
 .top-middle-things {
@@ -261,7 +261,8 @@ html{
     }
     .item-image {        
         max-width: 95%; 
-        grid-column: 1;       
+        grid-column: 1; 
+        margin-right: 0px;       
     }
     .item {
         padding-left: 10px;

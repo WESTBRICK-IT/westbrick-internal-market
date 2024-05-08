@@ -40,6 +40,7 @@
         $price = $_POST['price'];
         $body = $_POST['body'];        
         $date = date('Y-m-d');
+        $time = time();
         
         function convertApostrophe($string) { 
             $newString = str_replace("'", '`', $string); 
@@ -54,14 +55,23 @@
         $image_name = $_FILES['image']['name'];
         $image_tmp = $_FILES['image']['tmp_name'];  
         echo "<h1>Image Name: $image_name " . "Image tmp: $image_tmp</h1>";
-        $target_dir = "../img/item-images";
-        $target_file = $target_dir . basename($image_name);
-        move_uploaded_file($image_tmp, $target_file);
+        $target_dir = "../img/item-images/";
+        $target_file = $target_dir . basename($image_name);        
+        // move_uploaded_file($image_tmp, $target_file);
+
+        //chek if error
+        if(!move_uploaded_file($image_tmp, $target_file)){
+            $error = error_get_last();
+            echo 'Error: ' . $error['message'];
+        }
+        else {
+            echo "<h1>Successfully Uploaded</h1>";
+        }
 
        //replace carriage return with paragraph
-        $body = str_replace(chr(13), "</p><p class=`article-paragraph`>", $body); 
+        $body = str_replace(chr(13), "</p><p class=`item-body`>", $body); 
         
-        $sql = "INSERT INTO items (title, seller, date, price, body, image_name, image_tmp) VALUES ('$title', '$seller', '$date', '$price', '$body', '$image_name', '$image_tmp')";
+        $sql = "INSERT INTO items (title, seller, date, price, body, image_name, image_tmp, time) VALUES ('$title', '$seller', '$date', '$price', '$body', '$image_name', '$image_tmp', '$time')";
         // $sql = "INSERT INTO articles (title, author, body, date) VALUES ('$title', '$author', '$body', '$date')";
         
         if ($conn->query($sql) === TRUE) {

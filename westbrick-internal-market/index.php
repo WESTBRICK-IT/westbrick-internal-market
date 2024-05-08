@@ -25,6 +25,16 @@
         </div>         -->
 
         <?php
+
+            $allowedIPs = array('206.174.198.58', '206.174.198.59'); // Define the list of allowed IP addresses
+
+            $remoteIP = $_SERVER['REMOTE_ADDR']; // Get the remote IP address of the client
+
+            if (!in_array($remoteIP, $allowedIPs)) {
+                // Unauthorized access - display an error message or redirect
+                echo "<h1>Access denied. Your IP address is not allowed to view these items.</h1>";
+                exit();
+            }
             function convertApostrophe($string) { 
 				$newString = str_replace("`", "'", $string); 
 				return $newString; 
@@ -39,12 +49,13 @@
 
              $query = "SELECT * FROM `items` ORDER BY `date` DESC";
              $result = mysqli_query($conn, $query);
-             if (mysqli_num_rows($result) > 0) {
+             if (mysqli_num_rows($result) > 0) {                
                 while($row = mysqli_fetch_assoc($result)){
                    //replace grave image with apostrophe
                    $title = $row["title"];
                    $seller = $row["seller"];
                    $date = $row["date"];
+                   $time = $row["time"];
                    $price = $row["price"];
                    $body = $row["body"];
                    $image_name = $row["image_name"];
@@ -60,16 +71,18 @@
                    }
 
                    echo 	"<div class='item'>";
-                   echo		    "<img class='item-image' src='img/". $image_name ."' alt='Item Image'></img>";
+                   echo		    "<img class='item-image' src='img/item-images/". $image_name ."' alt='Item Image'></img>";
                    echo         "<div class='top-middle-things'>";
                    echo		        "<h1 class='item-title'>" . $title . "</h1>";
                    echo			    "<h4 class='item-seller'>". $seller . "</h4>";
                    echo 		    "<h5 class='item-posting-date'>" . $date . "</h5>";
+                   echo 		    "<h5 class='item-posting-date'>" . $time . "</h5>";
                    echo 	    "</div>";
                    echo 	    "<p class='item-body'>" . $body . "</p>";
                    echo 	    "<h1 class='item-price'>$" . $price . "</h1>";
-                   echo 	    "<a class='item-garbage-button' href=''><img class='item-garbage-button' src='img/garbage-can.svg' alt='Garbage Can'></a>";
-                   echo     "</div>";                  
+                   echo 	    "<a class='item-garbage-button' onclick='' href=''><img class='item-garbage-button' src='img/garbage-can.svg' alt='Garbage Can'></a>";
+                   echo     "</div>";   
+                                
                 }            
             }
             else {
