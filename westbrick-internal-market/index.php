@@ -9,7 +9,7 @@
 </head>
 <body>
     <img class="main-title" src="img/westbrick-internal-market.svg" alt="Westbrick Internal Market Title">
-    <button class="post-item-button" type="button">Post New Item</button> 
+    <button onclick="window.location.href='PHP/new-item.html'" class="post-item-button" type="button">Post New Item</button> 
     <div class="items">
 
         <!-- <div class="item">            
@@ -60,15 +60,16 @@
                    }
 
                    echo 	"<div class='item'>";
-                   echo		"<img class='item-image' src='img/". $image_name ."' alt='Item Image'></img>";
-                   echo     "<div class='top-middle-things'>";
-                   echo		    "<h1 class='item-title'>" . $title . "</h1>";
-                   echo			"<h4 class='item-seller'>". $seller . "</h4>";
-                   echo 		"<h5 class='item-posting-date'>" . $date . "</h5>";
-                   echo 	"</div>";
-                   echo 	"<p class='item-body'>" . $body . "</p>";
-                   echo 	"<h1 class='item-price'>$" . $price . "</h1>";
-                   echo 	"<a class='item-garbage-button' href=''><img class='item-garbage-button' src='img/garbage-can.svg' alt='Garbage Can'></a>";                   
+                   echo		    "<img class='item-image' src='img/". $image_name ."' alt='Item Image'></img>";
+                   echo         "<div class='top-middle-things'>";
+                   echo		        "<h1 class='item-title'>" . $title . "</h1>";
+                   echo			    "<h4 class='item-seller'>". $seller . "</h4>";
+                   echo 		    "<h5 class='item-posting-date'>" . $date . "</h5>";
+                   echo 	    "</div>";
+                   echo 	    "<p class='item-body'>" . $body . "</p>";
+                   echo 	    "<h1 class='item-price'>$" . $price . "</h1>";
+                   echo 	    "<a class='item-garbage-button' href=''><img class='item-garbage-button' src='img/garbage-can.svg' alt='Garbage Can'></a>";
+                   echo     "</div>";                  
                 }            
             }
             else {

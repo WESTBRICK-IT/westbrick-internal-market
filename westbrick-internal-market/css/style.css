@@ -174,6 +174,9 @@ html{
     font-size: 30px;
     font-size: 50px;
 }
+.westbrick-success-svg {
+    max-width: 100%;
+}
 @media screen and (max-width: 1600px) {
     .item {
 

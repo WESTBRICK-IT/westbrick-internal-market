@@ -27,7 +27,7 @@
         $servername = "localhost";
         $username = "cbarber";
         $password = "!!!Dr0w554p!!!";
-        $dbname = "items";
+        $dbname = "item_db";
         
         $conn = new mysqli($servername, $username, $password, $dbname);
         
@@ -39,7 +39,7 @@
         $seller = $_POST['seller'];
         $price = $_POST['price'];
         $body = $_POST['body'];        
-        $date = $_POST['date'];
+        $date = date('Y-m-d');
         
         function convertApostrophe($string) { 
             $newString = str_replace("'", '`', $string); 
@@ -61,7 +61,7 @@
        //replace carriage return with paragraph
         $body = str_replace(chr(13), "</p><p class=`article-paragraph`>", $body); 
         
-        $sql = "INSERT INTO items (title, seller, date, price, body, image_name, image_tmp) VALUES ('$title', '$author', '$body', '$date', '$image_name', '$image_tmp')";
+        $sql = "INSERT INTO items (title, seller, date, price, body, image_name, image_tmp) VALUES ('$title', '$seller', '$date', '$price', '$body', '$image_name', '$image_tmp')";
         // $sql = "INSERT INTO articles (title, author, body, date) VALUES ('$title', '$author', '$body', '$date')";
         
         if ($conn->query($sql) === TRUE) {
