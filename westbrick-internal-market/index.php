@@ -49,7 +49,8 @@
 
              $query = "SELECT * FROM `items` ORDER BY `date` DESC, `time` DESC";
              $result = mysqli_query($conn, $query);
-             if (mysqli_num_rows($result) > 0) {                               
+             if (mysqli_num_rows($result) > 0) {    
+                $i = 0;                           
                 while($row = mysqli_fetch_assoc($result)){
                    //replace grave image with apostrophe
                    $title = $row["title"];
@@ -80,9 +81,10 @@
                    echo 	    "</div>";
                    echo 	    "<p class='item-body'>" . $body . "</p>";
                    echo 	    "<h1 class='item-price'>$" . $price . "</h1>";
-                   echo 	    "<a class='item-garbage-button' onclick='deleteItem($date , $time, $title);' href=''><img class='item-garbage-button' src='img/garbage-can.svg' alt='Garbage Can'></a>";
-                   echo     "</div>";   
-                   
+                //    echo 	    "<a class='item-garbage-button' onclick='deleteItem('$date' , '$time', '$title');' href=''><img class='item-garbage-button' src='img/garbage-can.svg' alt='Garbage Can'></a>";
+                   echo 	    "<a class='item-garbage-button' onclick='deleteItem($date, $time, $title)'><img class='item-garbage-button' src='img/garbage-can.svg' alt='Garbage Can $i'></a>";
+                   echo     "</div>";
+                   $i++;
                 }            
             }
             else {
