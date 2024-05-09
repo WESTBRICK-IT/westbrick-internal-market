@@ -9,7 +9,7 @@
 </head>
 <body>
     <img class="main-title" src="img/westbrick-internal-market.svg" alt="Westbrick Internal Market Title">
-    <button onclick="window.location.href='PHP/new-item.html'" class="post-item-button" type="button">Post New Item</button> 
+    <button onclick="window.location.href='PHP/new-item.html'" class="post-item-button" type="button">Post New Item</button>
     <div class="items">
 
         <!-- <div class="item">            
@@ -49,8 +49,7 @@
 
              $query = "SELECT * FROM `items` ORDER BY `date` DESC, `time` DESC";
              $result = mysqli_query($conn, $query);
-             if (mysqli_num_rows($result) > 0) {    
-                $i = 0;                           
+             if (mysqli_num_rows($result) > 0) {                                            
                 while($row = mysqli_fetch_assoc($result)){
                    //replace grave image with apostrophe
                    $title = $row["title"];
@@ -60,6 +59,8 @@
                    $price = $row["price"];
                    $body = $row["body"];
                    $image_name = $row["image_name"];
+                   $id = $row["id"];
+
 
                    $title = convertApostrophe($title);
                    $seller = convertApostrophe($seller);
@@ -81,10 +82,10 @@
                    echo 	    "</div>";
                    echo 	    "<p class='item-body'>" . $body . "</p>";
                    echo 	    "<h1 class='item-price'>$" . $price . "</h1>";
-                //    echo 	    "<a class='item-garbage-button' onclick='deleteItem('$date' , '$time', '$title');' href=''><img class='item-garbage-button' src='img/garbage-can.svg' alt='Garbage Can'></a>";
-                   echo 	    "<a class='item-garbage-button' onclick='deleteItem(this.alt)'><img class='item-garbage-button' src='img/garbage-can.svg' alt='Garbage Can $i'></a>";
-                   echo     "</div>";
-                   $i++;
+                   echo 	    "<a class='item-garbage-button' onclick='deleteItem();' href=''><img class='item-garbage-button' src='img/garbage-can.svg' alt='Garbage Can'></a>";
+                   echo         "<h6 class='item-id'>$id</h6>";
+                //    echo 	    "<a class='item-garbage-button' onclick='deleteItem(this.alt)'><img class='item-garbage-button' src='img/garbage-can.svg' alt='Garbage Can $i'></a>";
+                   echo     "</div>";                   
                 }            
             }
             else {
@@ -96,6 +97,7 @@
         ?>
         
     </div>
+    <!-- <button onclick="window.location.href='PHP/delete-item.html'" class="delete-item-button" type="button">Delete Item</button> -->
 </body>
 </html>
 
