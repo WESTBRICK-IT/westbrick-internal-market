@@ -82,7 +82,7 @@
                    echo 	    "<p class='item-body'>" . $body . "</p>";
                    echo 	    "<h1 class='item-price'>$" . $price . "</h1>";
                 //    echo 	    "<a class='item-garbage-button' onclick='deleteItem('$date' , '$time', '$title');' href=''><img class='item-garbage-button' src='img/garbage-can.svg' alt='Garbage Can'></a>";
-                   echo 	    "<a class='item-garbage-button' onclick='deleteItem($date, $time, $title)'><img class='item-garbage-button' src='img/garbage-can.svg' alt='Garbage Can $i'></a>";
+                   echo 	    "<a class='item-garbage-button' onclick='deleteItem(this.alt)'><img class='item-garbage-button' src='img/garbage-can.svg' alt='Garbage Can $i'></a>";
                    echo     "</div>";
                    $i++;
                 }            
