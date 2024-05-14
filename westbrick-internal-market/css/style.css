@@ -120,10 +120,10 @@ html{
 .submission-form label{
     display: block;
     font-size: 24px;
-    margin: 10px auto;
-    text-align: center;  
-    margin-top: 20px;  
+    margin: 0px auto;
+    text-align: center;      
     font-weight: bold;
+    margin-top: 15px;
 }
 .submission-form input{
     display: block;
@@ -148,7 +148,7 @@ html{
     display: block;
     margin: 10px auto;
     width: 80%;
-    height: 300px;
+    height: 200px;
     padding: 20px;
     border-radius: 10px;      
     border-style: solid;
@@ -185,6 +185,8 @@ html{
 }
 .westbrick-success-svg {
     max-width: 100%;
+    margin-left: 300px;
+    margin-right: 300px;
 }
 .submission-form-top-input {
     display: flex;
@@ -201,9 +203,24 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
 }
+.home-button {
+    display: block;
+    margin: 30px auto;
+    height: 50px;
+    width: 200px;
+    background-color: rgb( 220, 164, 19);
+    font-size: 24px;    
+    font-weight: bold;
+}
+.home-button:hover {
+    background-color: yellow;
+}
 @media screen and (max-width: 1700px) {
-    
-
+    .submission-form-top-input {
+        flex-direction: column;
+    }
+    .submission-form label{        
+    }
 }
 @media screen and (max-width: 1600px) {
     .item {
@@ -222,14 +239,15 @@ input[type=number] {
     }
 }
 @media screen and (max-width: 1400px) {
-    .submission-form-top-input {
-        flex-direction: column;
-    }
+    
     .submission-form {
         margin-left: 100px;
         margin-right: 100px;
     }
-    
+    .westbrick-success-svg {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
 }
 @media screen and (max-width: 1300px) {
     
@@ -243,6 +261,10 @@ input[type=number] {
 @media screen and (max-width: 992px) {
     
     .items {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .westbrick-success-svg {
         margin-left: 10px;
         margin-right: 10px;
     }

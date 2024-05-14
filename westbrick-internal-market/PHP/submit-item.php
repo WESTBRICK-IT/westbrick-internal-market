@@ -42,8 +42,8 @@
         $date = date('Y-m-d');        
         date_default_timezone_set('America/Denver'); 
         $time = date('H:i:s', time());
-        echo $time;
-        echo "<h1>$time</h1>";
+        // echo $time;
+        // echo "<h1>$time</h1>";
         function convertApostrophe($string) { 
             $newString = str_replace("'", '`', $string); 
             return $newString; 
@@ -56,7 +56,7 @@
         //get the image and upload it
         $image_name = $_FILES['image']['name'];
         $image_tmp = $_FILES['image']['tmp_name'];  
-        echo "<h1>Image Name: $image_name " . "Image tmp: $image_tmp</h1>";
+        // echo "<h1>Image Name: $image_name " . "Image tmp: $image_tmp</h1>";
         $target_dir = "../img/item-images/";
         $target_file = $target_dir . basename($image_name);        
         // move_uploaded_file($image_tmp, $target_file);
@@ -64,10 +64,10 @@
         //chek if error
         if(!move_uploaded_file($image_tmp, $target_file)){
             $error = error_get_last();
-            echo 'Error: ' . $error['message'];
+            // echo 'Error: ' . $error['message'];
         }
         else {
-            echo "<h1>Successfully Uploaded</h1>";
+            // echo "<h1>Successfully Uploaded</h1>";
         }
 
        //replace carriage return with paragraph
