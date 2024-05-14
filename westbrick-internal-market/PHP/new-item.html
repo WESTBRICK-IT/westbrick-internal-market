@@ -11,14 +11,16 @@
     <img class="main-title" src="../img/westbrick-internal-market.svg" alt="Westbrick Internal Market Title">
     <h1 class="post-item-title">Post New Item</h1>
     <form class="submission-form" method="post" action="submit-item.php" enctype="multipart/form-data">
-        <label for="title">Title:</label>
-        <input type="text" id="title" name="title" required>
-                    
-        <label for="seller">Seller:</label>
-        <input type="text" id="seller" name="seller" required>        
+        <div class="submission-form-top-input">
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" required>
+                        
+            <label for="seller">Seller:</label>
+            <input type="text" id="seller" name="seller" required>        
 
-        <label for="price">Price:</label>
-        <input type="number" id="price" name="price" step="0.01" required>         
+            <label for="price">Price:</label>
+            <input type="number" id="price" name="price" step="0.01" required>
+        </div>
                 
         <label for="body">Item Description:</label>
         <textarea type="text" id="body" name="body" required></textarea>	

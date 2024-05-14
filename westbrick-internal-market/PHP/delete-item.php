@@ -33,18 +33,17 @@
         
         if ($conn->connect_error) {
             die("Connection failed: " . $conn->connect_error);
-        }    
+        }            
         
-        $date = $_GET['date'];
-        $time = $_GET['time'];
-        $title = $_GET['title'];
+        $id = $_GET['id'];
 
-        $sql = "DELETE FROM items WHERE date = '$date' AND time = '$time' AND title = '$title'";
+        $sql = "DELETE FROM items WHERE id = $id";
         
         if ($conn->query($sql) === TRUE) {
             // echo "<h1>Article $title submitted successfully! Redirecting to articles page in 5 seconds.</h1>";
+            echo "<h1>Item # $id Successfully Deleted</h1>";
             echo "<div class='westbrick-success-svg-container'>";
-            echo    "<img class='westbrick-success-svg' src='../img/westbrick-success.svg' alt='WESTBRICK SUCCESS SVG'>";
+            echo    "<img class='westbrick-success-svg' src='../img/article-deleted-successfully.svg' alt='WESTBRICK SUCCESS SVG'>";
             echo    "<button class='home-button' type='button' onclick='window.location.href=`../index.php`;'>Home</button>";
             echo "</div>";
             // echo "<br><h1>File name: $image" . "File tmp name: $image_tmp" . "</h1>";

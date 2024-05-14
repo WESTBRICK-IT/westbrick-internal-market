@@ -80,10 +80,12 @@
                    echo 		    "<h5 class='item-posting-date'>" . $date . "</h5>";
                    echo 		    "<h5 class='item-posting-date'>" . $time . "</h5>";
                    echo 	    "</div>";
-                   echo 	    "<p class='item-body'>" . $body . "</p>";
+                   echo         "<div>";
+                   echo 	        "<p class='item-body'>" . $body . "</p>";
+                   echo         "</div>";
                    echo 	    "<h1 class='item-price'>$" . $price . "</h1>";
-                   echo 	    "<a class='item-garbage-button' onclick='deleteItem();' href=''><img class='item-garbage-button' src='img/garbage-can.svg' alt='Garbage Can'></a>";
-                   echo         "<h6 class='item-id'>$id</h6>";
+                   echo 	    "<a class='item-garbage-button' href='./PHP/delete-item.php?id=$id'><img class='item-garbage-button' src='img/garbage-can.svg' alt='Garbage Can'></a>";
+                   echo         "<h6 class='item-id'>Item # $id</h6>";
                 //    echo 	    "<a class='item-garbage-button' onclick='deleteItem(this.alt)'><img class='item-garbage-button' src='img/garbage-can.svg' alt='Garbage Can $i'></a>";
                    echo     "</div>";                   
                 }            

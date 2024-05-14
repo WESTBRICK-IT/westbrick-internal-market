@@ -31,7 +31,7 @@ html{
 }
 .item {
     margin-bottom: 100px;
-    background-color: rgba(200, 200, 200, 0.3);
+    background-color: rgba(219, 206, 186, 0.2);
     border-radius: 10px;
     padding: 20px; 
     padding-left: 20px;   
@@ -57,7 +57,7 @@ html{
     border-width: 2px;
     padding: 7px;  
     grid-column: 1;
-    grid-row: 1 / 4;  
+    grid-row: 1 / 3;  
     display: flex;
     justify-self: center; 
     margin-right: 30px;       
@@ -79,7 +79,9 @@ html{
     grid-column: 2 / 5;
     grid-row: 2 / 4;
     margin-top: 0;
-    font-size: 20px;
+    font-size: 20px;    
+}
+.item-body p{
 }
 .item-price {
     grid-column: 3;
@@ -105,7 +107,7 @@ html{
     display: block;
     margin: 10px auto;
     margin-bottom: 100px;
-    background-color: rgba(200, 200, 200, 0.3);
+    background-color: rgba(219, 206, 186, 0.2);
     border-radius: 10px;      
     border-style: solid;
     border-color: rgb( 220, 164, 19);
@@ -127,14 +129,14 @@ html{
     display: block;
     margin: 10px auto;
     height: 50px;
-    background-color: rgba(255, 255, 255, 0.60);
+    background-color: rgba(219, 206, 186, 0.6);
     padding: 5px;
-    border-radius: 10px;      
+    border-radius: 5px;      
     border-style: solid;
     border-color: rgb( 220, 164, 19);
     border-width: 3px;
     height: 1.5em;
-    font-size: 24px;
+    font-size: 20px;
     max-width: 90%;
 }
 .date-box{
@@ -146,13 +148,13 @@ html{
     display: block;
     margin: 10px auto;
     width: 80%;
-    height: 500px;
+    height: 300px;
     padding: 20px;
     border-radius: 10px;      
     border-style: solid;
     border-color: rgb( 220, 164, 19);
-    border-width: 4px;
-    background-color: rgba(255, 255, 255, 0.60);
+    border-width: 4px;    
+    background-color: rgba(219, 206, 186, 0.6);
     font-size: 24px;
 }
 .submit-button{
@@ -164,6 +166,7 @@ html{
     font-weight: bold;
     text-align: center;    
     margin-top: 50px;
+    
 }
 .choose-file-input-box {
     width: 760px;
@@ -183,6 +186,14 @@ html{
 .westbrick-success-svg {
     max-width: 100%;
 }
+.submission-form-top-input {
+    display: flex;
+    justify-content: space-evenly;
+}
+@media screen and (max-width: 1700px) {
+    
+
+}
 @media screen and (max-width: 1600px) {
     .item {
 
@@ -200,6 +211,9 @@ html{
     }
 }
 @media screen and (max-width: 1400px) {
+    .submission-form-top-input {
+        flex-direction: column;
+    }
     .submission-form {
         margin-left: 100px;
         margin-right: 100px;
