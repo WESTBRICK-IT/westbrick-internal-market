@@ -183,10 +183,13 @@ html{
     font-size: 30px;
     font-size: 50px;
 }
-.westbrick-success-svg {
-    max-width: 100%;
-    margin-left: 300px;
-    margin-right: 300px;
+.westbrick-success-svg {    
+    display: block;
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 150px;
+    height: auto;
 }
 .submission-form-top-input {
     display: flex;
@@ -211,9 +214,16 @@ input[type=number] {
     background-color: rgb( 220, 164, 19);
     font-size: 24px;    
     font-weight: bold;
+    border-radius: 10px;
 }
 .home-button:hover {
-    background-color: yellow;
+    background-color: rgb(250, 194, 49);
+}
+.successful-deletion-indicator {
+    text-align: center;
+    font-size: 50px;
+    -webkit-text-stroke-color: rgb( 220, 164, 19);
+    -webkit-text-stroke-width: 2px;
 }
 @media screen and (max-width: 1700px) {
     .submission-form-top-input {
@@ -244,9 +254,8 @@ input[type=number] {
         margin-left: 100px;
         margin-right: 100px;
     }
-    .westbrick-success-svg {
-        margin-left: 100px;
-        margin-right: 100px;
+    .westbrick-success-svg {        
+        max-width: 80%;
     }
 }
 @media screen and (max-width: 1300px) {
@@ -264,9 +273,8 @@ input[type=number] {
         margin-left: 10px;
         margin-right: 10px;
     }
-    .westbrick-success-svg {
-        margin-left: 10px;
-        margin-right: 10px;
+    .westbrick-success-svg {        
+        max-width: 90%;
     }
     
 }
@@ -334,6 +342,9 @@ input[type=number] {
     .submission-form {
         margin-left: 5px;
         margin-right: 5px;
+    }
+    .item-id{
+        grid-row: 5;
     }
 }
 /* ARTICLE CODE */
