@@ -73,7 +73,7 @@
                    }
 
                    echo 	"<div class='item'>";
-                   echo		    "<img class='item-image' src='img/item-images/". $image_name ."' alt='Item Image'></img>";
+                   echo		    "<img class='item-image' onclick='window.location.href = `img/item-images/" . $image_name . "`;' src='img/item-images/". $image_name ."' alt='Item Image'></img>";
                    echo         "<div class='top-middle-things'>";
                    echo		        "<h1 class='item-title'>" . $title . "</h1>";
                    echo			    "<h4 class='item-seller'>". $seller . "</h4>";
