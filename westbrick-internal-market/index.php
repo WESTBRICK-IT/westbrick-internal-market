@@ -80,7 +80,7 @@
                    echo 		    "<h5 class='item-posting-date'>" . $date . "</h5>";
                    echo 		    "<h5 class='item-posting-date'>" . $time . "</h5>";
                    echo 	    "</div>";
-                   echo         "<div>";
+                   echo         "<div class='item-body'>";
                    echo 	        "<p class='item-body'>" . $body . "</p>";
                    echo         "</div>";
                    echo 	    "<h1 class='item-price'>$" . $price . "</h1>";
