@@ -1,21 +1,15 @@
-// const itemImage = document.querySelectorAll(".item-image");
+const garbageBin = document.querySelector(".item-garbage-button");
 
-
-// const linkToImage = function() {
-//     var imageURL = itemImage.src;
-//     window.location.href = imageURL;
-//     console.log("works ", itemImage.src);
-// }
-
-// for(i = 0; i < itemImage.length ; i++) {
-//     itemImage[i].addEventListener("click", linkToImage);
-// }
-
-const deleteItem = function(id){
-    
-    console.log(id);
-    if(confirm("Are you sure you want to delete this item?")) {
-        console.log(id);        
-        window.location.href = "../PHP/delete_item.php?id=" + id;
+const garbageBinClick = function(){
+    let userResponse = confirm("Are you sure you want to delete this item?");
+    console.log("garbage button click");
+    console.log(garbageBin.getAttribute("alt"));
+    if (userResponse) {
+        console.log("Item selected for deletion.");
+        // Add code here to delete the item from the list or perform any other actions
+    } else {
+        console.log("Deletion cancelled.");
     }
 }
+
+garbageBin.addEventListener("click", garbageBinClick);
