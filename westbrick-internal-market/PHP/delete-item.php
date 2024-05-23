@@ -43,7 +43,7 @@
             // echo "<h1>Article $title submitted successfully! Redirecting to articles page in 5 seconds.</h1>";
             echo "<h1 class='successful-deletion-indicator'>Item # $id Deleted</h1>";
             echo "<div class='westbrick-success-svg-container'>";
-            echo    "<img class='westbrick-success-svg' src='../img/article-deleted-successfully.svg' alt='WESTBRICK SUCCESS SVG'>";
+            echo    "<img class='westbrick-success-svg' src='../img/item-deleted-successfully.svg' alt='WESTBRICK SUCCESS SVG'>";
             echo    "<button class='home-button' type='button' onclick='window.location.href=`../index.php`;'>Home</button>";
             echo "</div>";
             // echo "<br><h1>File name: $image" . "File tmp name: $image_tmp" . "</h1>";
