@@ -8,7 +8,7 @@
     <script src="../js/script.js" defer></script>
 </head>
 <body>
-    <img class="main-title" src="../img/westbrick-internal-market.svg" alt="Westbrick Internal Market Title">
+    <img class="main-title" src="../img/internal-market.svg" alt="Westbrick Internal Market Title">
       
     <?php
         $allowedIPs = array('206.174.198.58', '206.174.198.59'); // Define the list of allowed IP addresses

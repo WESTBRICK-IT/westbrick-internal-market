@@ -7,7 +7,9 @@ html{
 	background-attachment: fixed;
 }
 .main-title {
-    max-width: 100%;
+    max-width: 50%;
+    display: block;
+    margin: auto;
 }
 .post-item-button {
     display: block;
@@ -68,6 +70,7 @@ html{
 }
 .item-title {
     padding-right: 20px;
+    font-size: 30px;
 }
 .item-seller {
     
@@ -79,7 +82,7 @@ html{
     grid-column: 2 / 5;
     grid-row: 2 / 4;
     margin-top: 0;
-    font-size: 20px;    
+    font-size: 18px;    
 }
 .item-body p{
 }
@@ -88,6 +91,7 @@ html{
     grid-row: 1;
     justify-self: end;
     align-self: start;
+    
 }
 .item-garbage-button {   
     justify-self: end;
