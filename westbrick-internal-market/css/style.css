@@ -121,7 +121,7 @@ html{
     margin-left: 400px;
     margin-right: 400px;
 }
-.submission-form label{
+.submission-form label {
     display: block;
     font-size: 20px;
     margin: 0px auto;
@@ -129,26 +129,24 @@ html{
     font-weight: bold;
     margin-top: 15px;
 }
-.submission-form input{
+.submission-form input {
     display: block;
-    margin: 10px auto;
-    height: 50px;
+    margin: 10px auto;    
     background-color: rgba(219, 206, 186, 0.6);
     padding: 5px;
     border-radius: 5px;      
     border-style: solid;
     border-color: rgb( 220, 164, 19);
-    border-width: 3px;
-    height: 1.5em;
+    border-width: 3px;    
     font-size: 20px;
     max-width: 90%;
 }
-.date-box{
+.date-box {
     width: 300px;
     padding: 5px;
     text-align: center;
 }
-.submission-form textarea{
+.submission-form textarea {
     display: block;
     margin: 10px auto;
     width: 80%;
@@ -161,7 +159,7 @@ html{
     background-color: rgba(219, 206, 186, 0.6);
     font-size: 24px;
 }
-.submit-button{
+.submit-button {
     display: block;
     margin: 30px auto 30px auto !important;    
     width: 300px;
@@ -169,20 +167,19 @@ html{
     border-radius: 5px;
     font-weight: bold;
     text-align: center;    
-    margin-top: 50px;
-    
+    margin-top: 50px;    
 }
 .choose-file-input-box {
     width: 760px;
     max-width: 90%;
 }
 .submit-button:hover {
-    background-color: rgba(253, 199, 22, 0.85);
+    background-color: rgb( 220, 164, 19);
 }
 .upload-image-button:hover {
-    background-color: rgba(253, 199, 22, 0.85);
+    background-color: rgb( 220, 164, 19);
 }
-.post-item-title{
+.post-item-title {
     text-align: center;
     font-size: 30px;
     
