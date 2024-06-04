@@ -8,7 +8,7 @@
     <script src="js/script.js" defer></script>
 </head>
 <body>
-    <img class="main-title" src="img/internal-market.svg" alt="Westbrick Internal Market Title">
+    <img class="main-title" src="img/westbrick-internal-market.svg" alt="Westbrick Internal Market Title">
     <button onclick="window.location.href='PHP/new-item.html'" class="post-item-button" type="button">Post New Item</button>
     <div class="items">
 
