@@ -28,8 +28,8 @@ html{
     background-color: rgb( 250, 194, 49);
 }
 .items {
-    margin-left: 300px;
-    margin-right: 300px;
+    margin-left: 400px;
+    margin-right: 400px;
 }
 .item {
     margin-bottom: 100px;
@@ -70,7 +70,7 @@ html{
 }
 .item-title {
     padding-right: 20px;
-    font-size: 30px;
+    font-size: 26px;
 }
 .item-seller {
     
@@ -91,7 +91,7 @@ html{
     grid-row: 1;
     justify-self: end;
     align-self: start;
-    
+    font-size: 26px;
 }
 .item-garbage-button {   
     justify-self: end;
@@ -117,13 +117,13 @@ html{
     border-color: rgb( 220, 164, 19);
     padding: 20px;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 24px;
-    margin-left: 300px;
-    margin-right: 300px;
+    font-size: 20px;
+    margin-left: 400px;
+    margin-right: 400px;
 }
 .submission-form label{
     display: block;
-    font-size: 24px;
+    font-size: 20px;
     margin: 0px auto;
     text-align: center;      
     font-weight: bold;
@@ -185,7 +185,7 @@ html{
 .post-item-title{
     text-align: center;
     font-size: 30px;
-    font-size: 50px;
+    
 }
 .westbrick-success-svg {    
     display: block;
