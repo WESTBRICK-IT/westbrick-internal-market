@@ -6,6 +6,7 @@
     <title>Westbrick Internal Marketplace Item Delete</title>
     <link rel="stylesheet" href="../css/style.css">
     <script src="../js/script.js" defer></script>
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
 </head>
 <body>
     <img class="main-title" src="../img/internal-market.svg" alt="Westbrick Internal Market Title">

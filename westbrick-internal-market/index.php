@@ -6,6 +6,8 @@
     <title>Westbrick Internal Marketplace</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script>
+    <script src="js/carousel.js" defer></script>
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
 </head>
 <body>
     <img class="main-title" src="img/westbrick-internal-market.svg" alt="Westbrick Internal Market Title">
