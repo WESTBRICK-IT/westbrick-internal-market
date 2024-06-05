@@ -61,6 +61,10 @@
                    $price = $row["price"];
                    $body = $row["body"];
                    $image_name = $row["image_name"];
+                   $image_name2 = $row["image_name2"];
+                   $image_name3 = $row["image_name3"];
+                   $image_name4 = $row["image_name4"];
+                   $image_name5 = $row["image_name5"];
                    $id = $row["id"];
 
 
@@ -73,9 +77,37 @@
                    if($image_name === ""){
                        $image_name = "WESTBRICK-Normal.svg";
                    }
-
                    echo 	"<div class='item'>";
-                   echo		    "<img class='item-image' onclick='window.location.href = `img/item-images/" . $image_name . "`;' src='img/item-images/". $image_name ."' alt='Item Image'></img>";
+                   //Item Carousel
+                //    echo		    "<img class='item-image' onclick='window.location.href = `img/item-images/" . $image_name . "`;' src='img/item-images/". $image_name ."' alt='Item Image'></img>";
+                   echo     "<div class='item-images'>";
+                   echo         "<div class='mySlides2 fade2'>";                   
+                   echo             "<img class='item-image1 item-image' onclick='window.location.href = `img/item-images" . $image_name . "`;' src='./img/item-images/". $image_name . "' alt='Item Image' style='width:100%'></img>";
+                   echo         "</div>";
+                   if($image_name2 != "") {
+                   echo         "<div class='mySlides2 fade2'>";
+                   echo             "<img class='item-image2 item-image' onclick='window.location.href = `img/item-images" . $image_name2 . "`;' src='./img/item-images/". $image_name2 . "' alt='Item Image' style='width:100%'></img>";
+                   echo         "</div>";
+                   }
+                   if($image_name3 != "") {
+                   echo         "<div class='mySlides2 fade2'>";
+                   echo             "<img class='item-image3 item-image' onclick='window.location.href = `img/item-images" . $image_name3 . "`;' src='./img/item-images/". $image_name3 . "' alt='Item Image' style='width:100%'></img>";
+                   echo         "</div>";
+                   }
+                   if($image_name4 != "") {
+                   echo         "<div class='mySlides2 fade2'>";
+                   echo             "<img class='item-image4 item-image' onclick='window.location.href = `img/item-images" . $image_name4 . "`;' src='./img/item-images/". $image_name4 . "' alt='Item Image' style='width:100%'></img>";
+                   echo         "</div>";
+                   }
+                   if($image_name5 != "") {
+                   echo         "<div class='mySlides2 fade2'>";
+                   echo             "<img class='item-image5 item-image' onclick='window.location.href = `img/item-images" . $image_name5 . "`;' src='./img/item-images/". $image_name5 . "' alt='Item Image' style='width:100%'></img>";
+                   echo         "</div>";
+                   }
+                   echo         "<a class='prev2' onclick='plusSlides2(-1)'>&#10094;</a>";
+                   echo         "<a class='next2' onclick='plusSlides2(1)'>&#10095;</a>";
+                   echo     "</div>";
+                   //Item Carousel End
                    echo         "<div class='top-middle-things'>";
                    echo		        "<h1 class='item-title'>" . $title . "</h1>";
                    echo			    "<h4 class='item-seller'>". $seller . "</h4>";

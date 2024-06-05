@@ -6,6 +6,7 @@
     <title>Westbrick Internal Marketplace Item Submitted</title>
     <link rel="stylesheet" href="../css/style.css">
     <script src="../js/script.js" defer></script>
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
 </head>
 <body>
     <img class="main-title" src="../img/westbrick-internal-market.svg" alt="Westbrick Internal Market Title">
@@ -53,14 +54,13 @@
         $body = convertApostrophe($body);    
         $price = convertApostrophe($price); 
 
-        //get the image and upload it
+        //get the first image and upload it
         $image_name = $_FILES['image']['name'];
-        $image_tmp = $_FILES['image']['tmp_name'];  
+        $image_tmp = $_FILES['image']['tmp_name'];          
         // echo "<h1>Image Name: $image_name " . "Image tmp: $image_tmp</h1>";
         $target_dir = "../img/item-images/";
         $target_file = $target_dir . basename($image_name);        
         // move_uploaded_file($image_tmp, $target_file);
-
         //chek if error
         if(!move_uploaded_file($image_tmp, $target_file)){
             $error = error_get_last();
@@ -69,11 +69,81 @@
         else {
             // echo "<h1>Successfully Uploaded</h1>";
         }
+        //end of first image upload
+
+
+        //get the second image and upload it
+        $image_name2 = $_FILES['image2']['name'];
+        $image_tmp2 = $_FILES['image2']['tmp_name'];         
+        // echo "<h1>Image Name: $image_name " . "Image tmp: $image_tmp</h1>";
+        $target_dir2 = "../img/item-images/";
+        $target_file2 = $target_dir2 . basename($image_name2);        
+        // move_uploaded_file($image_tmp, $target_file);
+        //chek if error
+        if(!move_uploaded_file($image_tmp2, $target_file2)){
+            $error = error_get_last();
+            // echo 'Error: ' . $error['message'];
+        }
+        else {
+            // echo "<h1>Successfully Uploaded</h1>";
+        }
+        //end of second image upload
+
+        //get the third image and upload it
+        $image_name3 = $_FILES['image3']['name'];
+        $image_tmp3 = $_FILES['image3']['tmp_name'];         
+        // echo "<h1>Image Name: $image_name " . "Image tmp: $image_tmp</h1>";
+        $target_dir3 = "../img/item-images/";
+        $target_file3 = $target_dir3 . basename($image_name3);        
+        // move_uploaded_file($image_tmp, $target_file);
+        //chek if error
+        if(!move_uploaded_file($image_tmp3, $target_file3)){
+            $error = error_get_last();
+            // echo 'Error: ' . $error['message'];
+        }
+        else {
+            // echo "<h1>Successfully Uploaded</h1>";
+        }
+        //end of third image upload
+
+        //get the fourth image and upload it
+        $image_name4 = $_FILES['image4']['name'];
+        $image_tmp4 = $_FILES['image4']['tmp_name'];         
+        // echo "<h1>Image Name: $image_name " . "Image tmp: $image_tmp</h1>";
+        $target_dir4 = "../img/item-images/";
+        $target_file4 = $target_dir4 . basename($image_name4);        
+        // move_uploaded_file($image_tmp, $target_file);
+        //chek if error
+        if(!move_uploaded_file($image_tmp4, $target_file4)){
+            $error = error_get_last();
+            // echo 'Error: ' . $error['message'];
+        }
+        else {
+            // echo "<h1>Successfully Uploaded</h1>";
+        }
+        //end of fourth image upload
+
+        //get the fifth image and upload it
+        $image_name5 = $_FILES['image5']['name'];
+        $image_tmp5 = $_FILES['image5']['tmp_name'];         
+        // echo "<h1>Image Name: $image_name " . "Image tmp: $image_tmp</h1>";
+        $target_dir5 = "../img/item-images/";
+        $target_file5 = $target_dir5 . basename($image_name5);        
+        // move_uploaded_file($image_tmp, $target_file);
+        //chek if error
+        if(!move_uploaded_file($image_tmp5, $target_file5)){
+            $error = error_get_last();
+            // echo 'Error: ' . $error['message'];
+        }
+        else {
+            // echo "<h1>Successfully Uploaded</h1>";
+        }
+        //end of fifth image upload
 
        //replace carriage return with paragraph
         $body = str_replace(chr(13), "</p><p class=`item-body`>", $body); 
         
-        $sql = "INSERT INTO items (title, seller, date, price, body, image_name, image_tmp, time) VALUES ('$title', '$seller', '$date', '$price', '$body', '$image_name', '$image_tmp', '$time')";
+        $sql = "INSERT INTO items (title, seller, date, price, body, image_name, image_name2, image_name3, image_name4, image_name5, image_tmp, time) VALUES ('$title', '$seller', '$date', '$price', '$body', '$image_name', '$image_name2', '$image_name3', '$image_name4', '$image_name5', '$image_tmp', '$time')";
         // $sql = "INSERT INTO articles (title, author, body, date) VALUES ('$title', '$author', '$body', '$date')";
         
         if ($conn->query($sql) === TRUE) {
