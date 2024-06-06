@@ -79,10 +79,10 @@ html{
     display: flex;
     align-items: center;
 }
-.next2 {
+.next {
     position: absolute;        
 }
-.prev2 {
+.prev {
     position: absolute;
     left: 3px;
 }

@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Westbrick Internal Marketplace</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=1.01">
+    <link rel="stylesheet" href="css/carousel.css?v=1.01">
     <script src="js/script.js" defer></script>
     <script src="js/carousel.js" defer></script>
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
@@ -80,32 +81,32 @@
                    echo 	"<div class='item'>";
                    //Item Carousel
                 //    echo		    "<img class='item-image' onclick='window.location.href = `img/item-images/" . $image_name . "`;' src='img/item-images/". $image_name ."' alt='Item Image'></img>";
-                   echo     "<div class='item-images'>";
-                   echo         "<div class='mySlides2 fade2'>";                   
-                   echo             "<img class='item-image1 item-image' onclick='window.location.href = `img/item-images" . $image_name . "`;' src='./img/item-images/". $image_name . "' alt='Item Image' style='width:100%'></img>";
+                   echo     "<div class='item$id-images item-images'>";
+                   echo         "<div class='mySlides fade'>";                   
+                   echo             "<img class='item$id-image1 item-image1 item-image' onclick='window.location.href = `img/item-images/" . $image_name . "`;' src='./img/item-images/". $image_name . "' alt='Item Image' style='width:100%'></img>";
                    echo         "</div>";
                    if($image_name2 != "") {
-                   echo         "<div class='mySlides2 fade2'>";
-                   echo             "<img class='item-image2 item-image' onclick='window.location.href = `img/item-images" . $image_name2 . "`;' src='./img/item-images/". $image_name2 . "' alt='Item Image' style='width:100%'></img>";
+                   echo         "<div class='mySlides fade'>";
+                   echo             "<img class='item$id-image2 item-image' onclick='window.location.href = `img/item-images/" . $image_name2 . "`;' src='./img/item-images/". $image_name2 . "' alt='Item Image' style='width:100%'></img>";
                    echo         "</div>";
                    }
                    if($image_name3 != "") {
-                   echo         "<div class='mySlides2 fade2'>";
-                   echo             "<img class='item-image3 item-image' onclick='window.location.href = `img/item-images" . $image_name3 . "`;' src='./img/item-images/". $image_name3 . "' alt='Item Image' style='width:100%'></img>";
+                   echo         "<div class='mySlides fade'>";
+                   echo             "<img class='item$id-image3 item-image' onclick='window.location.href = `img/item-images/" . $image_name3 . "`;' src='./img/item-images/". $image_name3 . "' alt='Item Image' style='width:100%'></img>";
                    echo         "</div>";
                    }
                    if($image_name4 != "") {
-                   echo         "<div class='mySlides2 fade2'>";
-                   echo             "<img class='item-image4 item-image' onclick='window.location.href = `img/item-images" . $image_name4 . "`;' src='./img/item-images/". $image_name4 . "' alt='Item Image' style='width:100%'></img>";
+                   echo         "<div class='mySlides fade'>";
+                   echo             "<img class='item$id-image4 item-image' onclick='window.location.href = `img/item-images/" . $image_name4 . "`;' src='./img/item-images/". $image_name4 . "' alt='Item Image' style='width:100%'></img>";
                    echo         "</div>";
                    }
                    if($image_name5 != "") {
-                   echo         "<div class='mySlides2 fade2'>";
-                   echo             "<img class='item-image5 item-image' onclick='window.location.href = `img/item-images" . $image_name5 . "`;' src='./img/item-images/". $image_name5 . "' alt='Item Image' style='width:100%'></img>";
+                   echo         "<div class='mySlides fade'>";
+                   echo             "<img class='item$id-image5 item-image' onclick='window.location.href = `img/item-images/" . $image_name5 . "`;' src='./img/item-images/". $image_name5 . "' alt='Item Image' style='width:100%'></img>";
                    echo         "</div>";
                    }
-                   echo         "<a class='prev2' onclick='plusSlides2(-1)'>&#10094;</a>";
-                   echo         "<a class='next2' onclick='plusSlides2(1)'>&#10095;</a>";
+                   echo         "<a class='prev' onclick='prevSlides($id)'>&#10094;</a>";
+                   echo         "<a class='next' onclick='nextSlides($id)'>&#10095;</a>";
                    echo     "</div>";
                    //Item Carousel End
                    echo         "<div class='top-middle-things'>";
