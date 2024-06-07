@@ -162,7 +162,7 @@ const prevIndexTester = function(id, itemImageIndex) {
         }    
         if(checkIfPrevEmpty(id, itemImageIndex)) {
             itemImageIndex = itemImageIndex - 1;            
-            itemImageIndex = itemImageIndex + MAX_NUMBER_OF_IMAGES % MAX_NUMBER_OF_IMAGES;
+            itemImageIndex = (itemImageIndex + MAX_NUMBER_OF_IMAGES) % MAX_NUMBER_OF_IMAGES;
             itemImageIndex = prevIndexTester(id, itemImageIndex);
         }else {
           const itemImage5 = document.querySelector(".item" + id + "-image5");
