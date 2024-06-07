@@ -23,7 +23,7 @@ const checkIfPrevEmpty = function(id, itemImageIndex) {
     return false;
   }
 }
-const indexTester = function(id, itemImageIndex) {
+const nextIndexTester = function(id, itemImageIndex) {
   if(itemImageIndex === 0) {
     const itemImage1 = document.querySelector(".item" + id + "-image1");
     if(itemImage1 != null) {
@@ -85,7 +85,7 @@ const indexTester = function(id, itemImageIndex) {
       //if the next one is empty just increment to the next one
       itemImageIndex = itemImageIndex +1;
       itemImageIndex = itemImageIndex % MAX_NUMBER_OF_IMAGES;
-      itemImageIndex = indexTester(id, itemImageIndex);
+      itemImageIndex = nextIndexTester(id, itemImageIndex);
     }else {
       const itemImage1 = document.querySelector(".item" + id + "-image1");
       itemImage1.style.display = "block";
@@ -99,79 +99,85 @@ const nextSlide = function(id) {
   //There is an alt variable that contains the picture index attached to item$id-images
   let itemImageIndex = thisItemImages.getAttribute("alt");
   itemImageIndex = parseInt(itemImageIndex);
-  itemImageIndex = indexTester(id, itemImageIndex);
+  itemImageIndex = nextIndexTester(id, itemImageIndex);
   itemImageIndex = itemImageIndex + 1;
   // modulus 4 to keep it from going over
   itemImageIndex = itemImageIndex % MAX_NUMBER_OF_IMAGES;
   thisItemImages.setAttribute("alt", itemImageIndex);
 }
 
+const prevIndexTester = function(id, itemImageIndex) {
+    if(itemImageIndex === 4){
+        const itemImage5 = document.querySelector(".item" + id + "-image5");
+        if(itemImage5 != null) {
+          itemImage5.style.display = "none";
+        }
+        if(checkIfPrevEmpty(id, itemImageIndex)) {
+          itemImageIndex = itemImageIndex - 1;
+        }else {
+          const itemImage4 = document.querySelector(".item" + id + "-image4");
+          itemImage4.style.display = "block";
+        }
+      }
+      if(itemImageIndex === 3){
+        const itemImage4 = document.querySelector(".item" + id + "-image4");
+        if(itemImage4 != null) {
+          itemImage4.style.display = "none";
+        }
+        if(checkIfPrevEmpty(id, itemImageIndex)) {
+          itemImageIndex = itemImageIndex - 1;
+        }else {
+          const itemImage3 = document.querySelector(".item" + id + "-image3");
+          itemImage3.style.display = "block";
+        }
+      }
+      if(itemImageIndex === 2){
+        const itemImage3 = document.querySelector(".item" + id + "-image3");
+        if(itemImage3 != null) {
+          itemImage3.style.display = "none";
+        }    
+        if(checkIfPrevEmpty(id, itemImageIndex)) {
+          itemImageIndex = itemImageIndex - 1;
+        }else {
+          const itemImage2 = document.querySelector(".item" + id + "-image2");
+          itemImage2.style.display = "block";
+        }
+      }
+      if(itemImageIndex === 1){
+        const itemImage2 = document.querySelector(".item" + id + "-image2");
+        if(itemImage2 != null) {
+          itemImage2.style.display = "none";
+        }    
+        if(checkIfPrevEmpty(id, itemImageIndex)) {
+          itemImageIndex = itemImageIndex - 1;
+        }else {
+          const itemImage1 = document.querySelector(".item" + id + "-image1");
+          itemImage1.style.display = "block";
+        }
+      }
+      if(itemImageIndex === 0) {
+        const itemImage1 = document.querySelector(".item" + id + "-image1");
+        if(itemImage1 != null) {
+          itemImage1.style.display = "none";
+        }    
+        if(checkIfPrevEmpty(id, itemImageIndex)) {
+            itemImageIndex = itemImageIndex - 1;            
+            itemImageIndex = itemImageIndex % MAX_NUMBER_OF_IMAGES;
+            itemImageIndex = prevIndexTester(id, itemImageIndex);
+        }else {
+          const itemImage5 = document.querySelector(".item" + id + "-image5");
+          itemImage5.style.display = "block";
+        }    
+      }
+    return itemImageIndex
+}
 
 const prevSlide = function(id) {
   const thisItemImages = document.querySelector(".item" + id + "-images");
   //There is an alt variable that contains the picture index attached to item$id-images
   let itemImageIndex = thisItemImages.getAttribute("alt");
   itemImageIndex = parseInt(itemImageIndex);     
-   if(itemImageIndex === 4){
-    const itemImage5 = document.querySelector(".item" + id + "-image5");
-    if(itemImage5 != null) {
-      itemImage5.style.display = "none";
-    }
-    if(checkIfPrevEmpty(id, itemImageIndex)) {
-      itemImageIndex = itemImageIndex - 1;
-    }else {
-      const itemImage4 = document.querySelector(".item" + id + "-image4");
-      itemImage4.style.display = "block";
-    }
-  }
-  if(itemImageIndex === 3){
-    const itemImage4 = document.querySelector(".item" + id + "-image4");
-    if(itemImage4 != null) {
-      itemImage4.style.display = "none";
-    }
-    if(checkIfPrevEmpty(id, itemImageIndex)) {
-      itemImageIndex = itemImageIndex - 1;
-    }else {
-      const itemImage3 = document.querySelector(".item" + id + "-image3");
-      itemImage3.style.display = "block";
-    }
-  }
-  if(itemImageIndex === 2){
-    const itemImage3 = document.querySelector(".item" + id + "-image3");
-    if(itemImage3 != null) {
-      itemImage3.style.display = "none";
-    }    
-    if(checkIfPrevEmpty(id, itemImageIndex)) {
-      itemImageIndex = itemImageIndex - 1;
-    }else {
-      const itemImage2 = document.querySelector(".item" + id + "-image2");
-      itemImage2.style.display = "block";
-    }
-  }
-  if(itemImageIndex === 1){
-    const itemImage2 = document.querySelector(".item" + id + "-image2");
-    if(itemImage2 != null) {
-      itemImage2.style.display = "none";
-    }    
-    if(checkIfPrevEmpty(id, itemImageIndex)) {
-      itemImageIndex = itemImageIndex - 1;
-    }else {
-      const itemImage1 = document.querySelector(".item" + id + "-image1");
-      itemImage1.style.display = "block";
-    }
-  }
-  if(itemImageIndex === 0) {
-    const itemImage1 = document.querySelector(".item" + id + "-image1");
-    if(itemImage1 != null) {
-      itemImage1.style.display = "none";
-    }    
-    if(checkIfPrevEmpty(id, itemImageIndex)) {
-      itemImageIndex = itemImageIndex - 1;
-    }else {
-      const itemImage5 = document.querySelector(".item" + id + "-image5");
-      itemImage5.style.display = "block";
-    }    
-  }
+  itemImageIndex = prevIndexTester(id, itemImageIndex);
   itemImageIndex = itemImageIndex + MAX_NUMBER_OF_IMAGES - 1;
   // modulus 4 to keep it from going over
   itemImageIndex = itemImageIndex % MAX_NUMBER_OF_IMAGES;
