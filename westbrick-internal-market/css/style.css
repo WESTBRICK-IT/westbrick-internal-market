@@ -1,3 +1,4 @@
+/* Programmed by Chris Barber June 6 2024 */
 html{
     background-color: rgba(220, 164, 19, 0.2);
     background-image: url(../img/WESTBRICK-wide-transparent.svg);    	
@@ -79,13 +80,7 @@ html{
     display: flex;
     align-items: center;
 }
-.next {
-    position: absolute;        
-}
-.prev {
-    position: absolute;
-    left: 3px;
-}
+
 .top-middle-things {
     grid-column: 2 / 3;
     grid-row: 1;

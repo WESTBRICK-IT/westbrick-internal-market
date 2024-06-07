@@ -1,3 +1,4 @@
+<!-- //Programmed by Chris Barber June 6 2024 -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -75,38 +76,55 @@
                    $body = convertApostrophe($body);
 
                    //if image name is empty or not found then add default image
-                   if($image_name === ""){
-                       $image_name = "WESTBRICK-Normal.svg";
+                   $westbrickSVG = "WESTBRICK-Normal.svg";
+                   $allEmpty = false;
+                   if($image_name === ""){                       
+                   }
+                   else if($image_name2 === "") {
+                   }
+                   else if($image_name3 === "") {
+                   }
+                   else if($image_name4 === "") {
+                   }
+                   else if($image_name5 === "") {
+                       $allEmpty = true; 
                    }
                    echo 	"<div class='item'>";
                    //Item Carousel
                 //    echo		    "<img class='item-image' onclick='window.location.href = `img/item-images/" . $image_name . "`;' src='img/item-images/". $image_name ."' alt='Item Image'></img>";
-                   echo     "<div class='item$id-images item-images'>";
+                   echo     "<div class='item$id-images item-images' alt='0'>";
+                   if($image_name != "") {
                    echo         "<div class='mySlides fade'>";                   
                    echo             "<img class='item$id-image1 item-image1 item-image' onclick='window.location.href = `img/item-images/" . $image_name . "`;' src='./img/item-images/". $image_name . "' alt='Item Image' style='width:100%'></img>";
                    echo         "</div>";
+                   }
                    if($image_name2 != "") {
-                   echo         "<div class='mySlides fade'>";
+                   echo         "<div class='mySlides fade' alt='0'>";
                    echo             "<img class='item$id-image2 item-image' onclick='window.location.href = `img/item-images/" . $image_name2 . "`;' src='./img/item-images/". $image_name2 . "' alt='Item Image' style='width:100%'></img>";
                    echo         "</div>";
                    }
                    if($image_name3 != "") {
-                   echo         "<div class='mySlides fade'>";
+                   echo         "<div class='mySlides fade' alt='0'>";
                    echo             "<img class='item$id-image3 item-image' onclick='window.location.href = `img/item-images/" . $image_name3 . "`;' src='./img/item-images/". $image_name3 . "' alt='Item Image' style='width:100%'></img>";
                    echo         "</div>";
                    }
                    if($image_name4 != "") {
-                   echo         "<div class='mySlides fade'>";
+                   echo         "<div class='mySlides fade' alt='0'>";
                    echo             "<img class='item$id-image4 item-image' onclick='window.location.href = `img/item-images/" . $image_name4 . "`;' src='./img/item-images/". $image_name4 . "' alt='Item Image' style='width:100%'></img>";
                    echo         "</div>";
                    }
                    if($image_name5 != "") {
-                   echo         "<div class='mySlides fade'>";
+                   echo         "<div class='mySlides fade' alt='0'>";
                    echo             "<img class='item$id-image5 item-image' onclick='window.location.href = `img/item-images/" . $image_name5 . "`;' src='./img/item-images/". $image_name5 . "' alt='Item Image' style='width:100%'></img>";
                    echo         "</div>";
                    }
-                   echo         "<a class='prev' onclick='prevSlides($id)'>&#10094;</a>";
-                   echo         "<a class='next' onclick='nextSlides($id)'>&#10095;</a>";
+                   if($allEmpty){
+                   echo         "<div class='mySlides fade' alt='0'>";
+                   echo             "<img class='item$id-image5 item-image' onclick='window.location.href = `img/item-images/" . $westbrickSVG . "`;' src='./img/item-images/". $westbrickSVG . "' alt='Item Image' style='width:100%'></img>";
+                   echo         "</div>";
+                   }
+                   echo         "<a class='prev' onclick='prevSlide($id)'>&#10094;</a>";
+                   echo         "<a class='next' onclick='nextSlide($id)'>&#10095;</a>";
                    echo     "</div>";
                    //Item Carousel End
                    echo         "<div class='top-middle-things'>";

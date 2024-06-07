@@ -1,3 +1,4 @@
+//Programmed by Chris Barber June 6 2024
 const garbageBin = document.querySelectorAll(".item-garbage-button");
 
 const garbageBinClick = function() {
@@ -18,3 +19,7 @@ const garbageBinClick = function() {
 for(i = 0; i < garbageBin.length; i++) {
     garbageBin[i].addEventListener("click", garbageBinClick);
 }
+
+window.onload = function() {
+    
+  };
