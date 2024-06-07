@@ -85,13 +85,13 @@ const indexTester = function(id, itemImageIndex) {
       //if the next one is empty just increment to the next one
       itemImageIndex = itemImageIndex +1;
       itemImageIndex = itemImageIndex % MAX_NUMBER_OF_IMAGES;
-      indexTester(id, itemImageIndex);
+      itemImageIndex = indexTester(id, itemImageIndex);
     }else {
       const itemImage1 = document.querySelector(".item" + id + "-image1");
       itemImage1.style.display = "block";
     }
   }
-  return itemImageIndex;
+  return itemImageIndex
 }
 
 const nextSlide = function(id) {
@@ -178,12 +178,31 @@ const prevSlide = function(id) {
   thisItemImages.setAttribute("alt", itemImageIndex);
 }
 
+const getIdAndImageNumber = function(classString) {
+    const numbers = classString.match(/\d+/g);       
+    return numbers;
+}
+const displayFirstImage = function(id, imageNumber) {
+    const firstImage = document.querySelector(".item" + id + "-image" + imageNumber);
+    firstImage.style.display = "block";
+}
+const setImageIndex = function(id, imageNumber) {
+    const itemImages = document.querySelector('.item' + id + '-images');
+    itemImages.setAttribute('alt', imageNumber-1);
+}
 //on initial load of website displays first image in each item
 window.onload = function() {
-    const allItems = document.querySelectorAll(".item");
-    console.log(allItems.length);
-    for(let i = 0; i < allItems.length; i++) {
-      console.log(allItems[i]);
-      
+    const allItems = document.querySelectorAll(".item");    
+    for(let i = 0; i < allItems.length; i++) {      
+      const itemImagesDiv = allItems[i].querySelector('div');      
+      const nestedImgFirst =  itemImagesDiv.querySelector('img');
+      if(nestedImgFirst != null) {        
+        const classString = nestedImgFirst.getAttribute('class');
+        const idAndImageNumber = getIdAndImageNumber(classString); 
+        const id = idAndImageNumber[0];
+        const imageNumber = idAndImageNumber[1];        
+        displayFirstImage(id, imageNumber);
+        setImageIndex(id, imageNumber);
+      }
     }
 };
