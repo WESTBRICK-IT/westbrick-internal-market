@@ -78,17 +78,38 @@
                    //if image name is empty or not found then add default image
                    $westbrickSVG = "WESTBRICK-Normal.svg";
                    $allEmpty = false;
-                   if($image_name === ""){                       
-                   }
-                   else if($image_name2 === "") {
-                   }
-                   else if($image_name3 === "") {
-                   }
-                   else if($image_name4 === "") {
-                   }
-                   else if($image_name5 === "") {
-                       $allEmpty = true; 
-                   }
+                   
+                    if( $image_name == "" &&
+                        $image_name2 == "" &&
+                        $image_name3 == "" &&
+                        $image_name4 == "" &&
+                        $image_name5 == ""){                        
+                        $allEmpty = true;
+                    }
+                    
+                    $atLeastTwo = false;
+                    $itemCount = 0;
+                    if($image_name != "") {
+                        $itemCount = $itemCount +1;
+                    }
+                    if($image_name2 != "") {
+                        $itemCount = $itemCount +1;
+                    }
+                    if($image_name3 != "") {
+                        $itemCount = $itemCount +1;
+                    }
+                    if($image_name4 != "") {
+                        $itemCount = $itemCount +1;
+                    }
+                    if($image_name5 != "") {
+                        $itemCount = $itemCount +1;
+                    }
+                    if($itemCount >= 2) {
+                        $atLeastTwo = true;                        
+                    }                    
+
+                    
+                    
                    echo 	"<div class='item'>";
                    //Item Carousel
                 //    echo		    "<img class='item-image' onclick='window.location.href = `img/item-images/" . $image_name . "`;' src='img/item-images/". $image_name ."' alt='Item Image'></img>";
@@ -123,8 +144,11 @@
                    echo             "<img class='item$id-image5 item-image' onclick='window.location.href = `img/item-images/" . $westbrickSVG . "`;' src='./img/item-images/". $westbrickSVG . "' alt='Item Image' style='width:100%'></img>";
                    echo         "</div>";
                    }
-                   echo         "<a class='prev' onclick='prevSlide($id)'>&#10094;</a>";
-                   echo         "<a class='next' onclick='nextSlide($id)'>&#10095;</a>";
+                   //If there is at least two images then add arrows
+                   if($atLeastTwo) {
+                    echo         "<a class='prev' onclick='prevSlide($id)'>&#10094;</a>";
+                    echo         "<a class='next' onclick='nextSlide($id)'>&#10095;</a>";
+                   }                   
                    echo     "</div>";
                    //Item Carousel End
                    echo         "<div class='top-middle-things'>";
@@ -138,7 +162,7 @@
                    echo         "</div>";
                    echo 	    "<h1 class='item-price'>$" . $price . "</h1>";
                 //    echo 	    "<a class='item-garbage-button' href='./PHP/delete-item.php?id=$id'><img class='item-garbage-button' src='img/garbage-can.svg' alt='Garbage Can'></a>";
-                   echo         "<img class='item-garbage-button' src='img/garbage-can.svg' alt='Garbage Can $id'>";
+                   echo         "<img class='item-garbage-button' src='img/garbage-can.svg' alt='Garbage Can $id'></img>";
                    echo         "<h6 class='item-id'>Item # $id</h6>";
                 //    echo 	    "<a class='item-garbage-button' onclick='deleteItem(this.alt)'><img class='item-garbage-button' src='img/garbage-can.svg' alt='Garbage Can $i'></a>";
                    echo     "</div>";                   

@@ -20,6 +20,3 @@ for(i = 0; i < garbageBin.length; i++) {
     garbageBin[i].addEventListener("click", garbageBinClick);
 }
 
-window.onload = function() {
-    
-  };
