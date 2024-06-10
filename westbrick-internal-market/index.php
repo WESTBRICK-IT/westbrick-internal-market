@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Westbrick Internal Marketplace</title>
-    <link rel="stylesheet" href="css/style.css?v=1.01">
-    <link rel="stylesheet" href="css/carousel.css?v=1.01">
+    <link rel="stylesheet" href="css/style.css?v=1.02">
+    <link rel="stylesheet" href="css/carousel.css?v=1.02">
     <script src="js/script.js" defer></script>
     <script src="js/carousel.js" defer></script>
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
