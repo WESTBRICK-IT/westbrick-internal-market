@@ -68,6 +68,7 @@
                    $image_name4 = $row["image_name4"];
                    $image_name5 = $row["image_name5"];
                    $id = $row["id"];
+                   $email = $row["email"];
 
 
                    $title = convertApostrophe($title);
@@ -77,8 +78,7 @@
 
                    //if image name is empty or not found then add default image
                    $westbrickSVG = "WESTBRICK-Normal.svg";
-                   $allEmpty = false;
-                   
+                   $allEmpty = false;                   
                     if( $image_name == "" &&
                         $image_name2 == "" &&
                         $image_name3 == "" &&
@@ -86,7 +86,7 @@
                         $image_name5 == ""){                        
                         $allEmpty = true;
                     }
-                    
+                    //check if there are at least two images to display next and prev arrows
                     $atLeastTwo = false;
                     $itemCount = 0;
                     if($image_name != "") {
@@ -108,6 +108,10 @@
                         $atLeastTwo = true;                        
                     }                    
 
+                    //see if e-mail is there
+                    if($email == ""){
+                        $emailEmpty = true;
+                    }
                     
                     
                    echo 	"<div class='item'>";
@@ -154,6 +158,9 @@
                    echo         "<div class='top-middle-things'>";
                    echo		        "<h1 class='item-title'>" . $title . "</h1>";
                    echo			    "<h4 class='item-seller'>". $seller . "</h4>";
+                   if(!$emailEmpty){
+                   echo             "<h4>Seller E-Mail: <a href='mailto:$email' class='item-seller-email'>$email</a></h4>";
+                   }                   
                    echo 		    "<h5 class='item-posting-date'>" . $date . "</h5>";
                    echo 		    "<h5 class='item-posting-date'>" . $time . "</h5>";
                    echo 	    "</div>";

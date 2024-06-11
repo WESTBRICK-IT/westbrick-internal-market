@@ -39,6 +39,7 @@
         
         $title = $_POST['title'];
         $seller = $_POST['seller'];
+        $email = $_POST['email'];
         $price = $_POST['price'];
         $body = $_POST['body'];        
         $date = date('Y-m-d');        
@@ -54,6 +55,7 @@
         $seller = convertApostrophe($seller);
         $body = convertApostrophe($body);    
         $price = convertApostrophe($price); 
+        
 
         //get the first image and upload it
         $image_name = $_FILES['image']['name'];
@@ -144,7 +146,7 @@
        //replace carriage return with paragraph
         $body = str_replace(chr(13), "</p><p class=`item-body`>", $body); 
         
-        $sql = "INSERT INTO items (title, seller, date, price, body, image_name, image_name2, image_name3, image_name4, image_name5, image_tmp, time) VALUES ('$title', '$seller', '$date', '$price', '$body', '$image_name', '$image_name2', '$image_name3', '$image_name4', '$image_name5', '$image_tmp', '$time')";
+        $sql = "INSERT INTO items (title, seller, date, price, body, image_name, image_name2, image_name3, image_name4, image_name5, image_tmp, time, email) VALUES ('$title', '$seller', '$date', '$price', '$body', '$image_name', '$image_name2', '$image_name3', '$image_name4', '$image_name5', '$image_tmp', '$time', '$email')";
         // $sql = "INSERT INTO articles (title, author, body, date) VALUES ('$title', '$author', '$body', '$date')";
         
         if ($conn->query($sql) === TRUE) {
