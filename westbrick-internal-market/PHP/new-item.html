@@ -10,27 +10,27 @@
     <link rel="icon" href="../favicon.ico" type="image/x-icon">    
 </head>
 <body>
-    <a href="https://www.westbrick.ca/westbrick-internal-market/test/index.php"><img class="main-title" src="../img/westbrick-internal-market.svg" alt="Westbrick Internal Market Title"></a>
+    <a href="https://www.westbrick.ca/westbrick-internal-market/index.php"><img class="main-title" src="../img/westbrick-internal-market.svg" alt="Westbrick Internal Market Title"></a>
     <h1 class="post-item-title">Post New Item</h1>
     <form class="submission-form" method="post" action="submit-item.php" enctype="multipart/form-data">
         <div class="submission-form-top-input">
             <label for="title">Title:</label>
-            <input type="text" id="title" name="title" required>
+            <input type="text" id="title" name="title">
                         
             <label for="seller">Seller:</label>
-            <input type="text" id="seller" name="seller" required>
+            <input type="text" id="seller" name="seller">
 
             <label for="email">E-Mail:</label>
             <input type="text" id="email" name="email">   
 
             <label for="price">Price: $</label>
-            <input class="item-price-input" type="number" id="price" name="price" step="0.01" required>
+            <input class="item-price-input" type="number" id="price" name="price" step="0.01">
         </div>
                 
         <label for="body">Item Description:</label>
-        <textarea type="text" id="body" name="body" required></textarea>	
+        <textarea type="text" id="body" name="body"></textarea>	
     
-        <label for="image" class="custom-file-input">Select an image or images for your article if you like *Westbrick logo will be used if all fields left empty*:</label>
+        <label for="image" class="custom-file-input">Select an image or images for your article if you like (maximum 5) *Westbrick logo will be used if all fields left empty*:</label>
         <input type="file" name="image" id="image">
 
         <label for="image2" class="custom-file-input">Image 2</label>

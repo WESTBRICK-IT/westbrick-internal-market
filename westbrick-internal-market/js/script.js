@@ -9,8 +9,8 @@ const garbageBinClick = function() {
     let garbageCanNumber = garbageCanNumberString.match(/\d+$/);
     console.log(garbageCanNumber);
     if (userResponse) {
-        console.log("Item selected for deletion." + "../PHP/delete-item.php?id=" + garbageCanNumber);
-        window.location.href = "../test/PHP/delete-item.php?id="+ garbageCanNumber;
+        console.log("Item selected for deletion." + "./PHP/delete-item.php?id=" + garbageCanNumber);
+        window.location.href = "./PHP/delete-item.php?id="+ garbageCanNumber;
         // Add code here to delete the item from the list or perform any other actions
     } else {
         console.log("Deletion cancelled.");

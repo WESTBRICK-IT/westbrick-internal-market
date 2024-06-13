@@ -13,7 +13,7 @@
 </head>
 <body>
     <img class="main-title" src="img/westbrick-internal-market.svg" alt="Westbrick Internal Market Title">
-    <button onclick="window.location.href='PHP/new-item.html'" class="post-item-button" type="button">Post New Item</button>
+    <button onclick="window.location.href='./PHP/new-item.html'" class="post-item-button" type="button">Post New Item</button>
     <div class="items">
 
         <!-- <div class="item">            
@@ -30,7 +30,7 @@
 
         <?php
 
-            $allowedIPs = array('206.174.198.58', '206.174.198.59'); // Define the list of allowed IP addresses
+            $allowedIPs = array('206.174.198.58', '206.174.198.59', '50.99.132.206'); // Define the list of allowed IP addresses
 
             $remoteIP = $_SERVER['REMOTE_ADDR']; // Get the remote IP address of the client
 
@@ -159,7 +159,7 @@
                    echo		        "<h1 class='item-title'>" . $title . "</h1>";
                    echo			    "<h4 class='item-seller'>". $seller . "</h4>";
                    if(!$emailEmpty){
-                   echo             "<h4>Seller E-Mail: <a href='mailto:$email' class='item-seller-email'>$email</a></h4>";
+                   echo             "<h4><a href='mailto:$email' class='item-seller-email'>$email</a></h4>";
                    }                   
                    echo 		    "<h5 class='item-posting-date'>" . $date . "</h5>";
                    echo 		    "<h5 class='item-posting-date'>" . $time . "</h5>";
