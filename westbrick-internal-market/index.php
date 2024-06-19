@@ -3,7 +3,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <title>Westbrick Internal Marketplace</title>
     <link rel="stylesheet" href="css/style.css?v=1.02">
     <link rel="stylesheet" href="css/carousel.css?v=1.02">
@@ -29,6 +32,8 @@
         </div>         -->
 
         <?php
+
+            
 
             $allowedIPs = array('206.174.198.58', '206.174.198.59', '50.99.132.206'); // Define the list of allowed IP addresses
 
@@ -119,32 +124,32 @@
                 //    echo		    "<img class='item-image' onclick='window.location.href = `img/item-images/" . $image_name . "`;' src='img/item-images/". $image_name ."' alt='Item Image'></img>";
                    echo     "<div class='item$id-images item-images' alt='0'>";
                    if($image_name != "") {
-                   echo         "<div class='mySlides fade'>";                   
+                   echo         "<div alt='0'>";                   
                    echo             "<img class='item$id-image1 item-image1 item-image' onclick='window.location.href = `img/item-images/" . $image_name . "`;' src='./img/item-images/". $image_name . "' alt='Item Image' style='width:100%'></img>";
                    echo         "</div>";
                    }
                    if($image_name2 != "") {
-                   echo         "<div class='mySlides fade' alt='0'>";
+                   echo         "<div alt='0'>";
                    echo             "<img class='item$id-image2 item-image' onclick='window.location.href = `img/item-images/" . $image_name2 . "`;' src='./img/item-images/". $image_name2 . "' alt='Item Image' style='width:100%'></img>";
                    echo         "</div>";
                    }
                    if($image_name3 != "") {
-                   echo         "<div class='mySlides fade' alt='0'>";
+                   echo         "<div alt='0'>";
                    echo             "<img class='item$id-image3 item-image' onclick='window.location.href = `img/item-images/" . $image_name3 . "`;' src='./img/item-images/". $image_name3 . "' alt='Item Image' style='width:100%'></img>";
                    echo         "</div>";
                    }
                    if($image_name4 != "") {
-                   echo         "<div class='mySlides fade' alt='0'>";
+                   echo         "<div alt='0'>";
                    echo             "<img class='item$id-image4 item-image' onclick='window.location.href = `img/item-images/" . $image_name4 . "`;' src='./img/item-images/". $image_name4 . "' alt='Item Image' style='width:100%'></img>";
                    echo         "</div>";
                    }
                    if($image_name5 != "") {
-                   echo         "<div class='mySlides fade' alt='0'>";
+                   echo         "<div alt='0'>";
                    echo             "<img class='item$id-image5 item-image' onclick='window.location.href = `img/item-images/" . $image_name5 . "`;' src='./img/item-images/". $image_name5 . "' alt='Item Image' style='width:100%'></img>";
                    echo         "</div>";
                    }
                    if($allEmpty){
-                   echo         "<div class='mySlides fade' alt='0'>";
+                   echo         "<div alt='0'>";
                    echo             "<img class='item$id-image5 item-image' onclick='window.location.href = `img/item-images/" . $westbrickSVG . "`;' src='./img/item-images/". $westbrickSVG . "' alt='Item Image' style='width:100%'></img>";
                    echo         "</div>";
                    }
