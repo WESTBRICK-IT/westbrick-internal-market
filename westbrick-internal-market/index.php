@@ -120,8 +120,7 @@
                     
                     
                    echo 	"<div class='item'>";
-                   //Item Carousel
-                //    echo		    "<img class='item-image' onclick='window.location.href = `img/item-images/" . $image_name . "`;' src='img/item-images/". $image_name ."' alt='Item Image'></img>";
+                   //Item Carousel                
                    echo     "<div class='item$id-images item-images' alt='0'>";
                    if($image_name != "") {
                    echo         "<div alt='0'>";                   
@@ -172,11 +171,9 @@
                    echo         "<div class='item-body'>";
                    echo 	        "<p class='item-body'>" . $body . "</p>";
                    echo         "</div>";
-                   echo 	    "<h1 class='item-price'>$" . $price . "</h1>";
-                //    echo 	    "<a class='item-garbage-button' href='./PHP/delete-item.php?id=$id'><img class='item-garbage-button' src='img/garbage-can.svg' alt='Garbage Can'></a>";
+                   echo 	    "<h1 class='item-price'>$" . $price . "</h1>";                
                    echo         "<img class='item-garbage-button' src='img/garbage-can.svg' alt='Garbage Can $id'></img>";
-                   echo         "<h6 class='item-id'>Item # $id</h6>";
-                //    echo 	    "<a class='item-garbage-button' onclick='deleteItem(this.alt)'><img class='item-garbage-button' src='img/garbage-can.svg' alt='Garbage Can $i'></a>";
+                   echo         "<h6 class='item-id'>Item # $id</h6>";                
                    echo     "</div>";                   
                 }            
             }
