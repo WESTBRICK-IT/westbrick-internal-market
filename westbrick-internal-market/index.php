@@ -17,24 +17,8 @@
 <body>
     <img class="main-title" src="img/westbrick-internal-market.svg" alt="Westbrick Internal Market Title">
     <button onclick="window.location.href='./PHP/new-item.html'" class="post-item-button" type="button">Post New Item</button>
-    <div class="items">
-
-        <!-- <div class="item">            
-            <img class="item-image" src="img/motorcycle-1.jpg" alt="Item Image"></img>
-            <div class="top-middle-things">
-                <h1 class="item-title">Japanese 80's Motorcycle Really Long Title OVer here</h1>
-                <h4 class="item-seller">Chris Barber</h4>
-                <h5 class="item-posting-date">May 3rd 2024</h5>                
-            </div>              
-            <p class="item-body">Sup dudes, I'm selling this motorcycle. It's really cool. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <h1 class="item-price">$5000</h3>            
-            <a class="item-garbage-button" href="#"><img class="item-garbage-button" src="img/garbage-can.svg" alt="Garbage Can"></a>
-        </div>         -->
-
+    <div class="items">      
         <?php
-
-            
-
             $allowedIPs = array('206.174.198.58', '206.174.198.59', '50.99.132.206'); // Define the list of allowed IP addresses
 
             $remoteIP = $_SERVER['REMOTE_ADDR']; // Get the remote IP address of the client
